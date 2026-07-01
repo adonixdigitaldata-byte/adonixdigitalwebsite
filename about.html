@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Best Practices -->
+    <title>About Us | Adonix Digital</title>
+    <meta name="description" content="Transform your business with Saudi Arabia's leading AI & Digital Growth Agency. Specialized in AI automation, SEO, Google & Social Ads, and custom growth systems for enterprise, government, and startups in Riyadh, KSA & GCC." />
+    <meta name="keywords" content="AI Digital Marketing Saudi Arabia, Digital Marketing Riyadh, AI Automation KSA, SEO Riyadh, Growth Agency Saudi, Vision 2030 digital, Web Development Riyadh" />
+    
+    <!-- Fonts: Inter & Outfit for English, Tajawal & Cairo for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body data-scene-preset="ABOUT">
+    <!-- Premium Loader -->
+    <div id="loader" class="loader-container">
+      <div class="loader-content">
+        <div class="loader-logo">ADONIX</div>
+        <div class="loader-bar-bg">
+          <div id="loader-bar" class="loader-bar"></div>
+        </div>
+        <div id="loader-percent" class="loader-percent">0%</div>
+        <div class="loader-subtitle" data-translate="loader_subtitle">Initializing Digital Ecosystem...</div>
+      </div>
+    </div>
+
+    <!-- Custom Futuristic Cursor -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="custom-cursor-ring" class="custom-cursor-ring"></div>
+
+    <!-- WebGL Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Global Navigation -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-brand">
+          <span class="brand-text">ADONIX</span>
+          <span class="brand-accent">.</span>
+        </a>
+        
+        
+        <nav class="nav-links">
+          <a href="/" data-translate="nav_home">Home</a>
+          <a href="about.html" data-translate="nav_about">About Us</a>
+          <a href="services.html" data-translate="nav_services">Services</a>
+          <a href="contact.html" data-translate="nav_contact">Contact Us</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">العربية</button>
+          <a href="contact.html" class="btn btn-primary nav-cta" data-translate="nav_cta">Book Strategy Call</a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+      
+      <nav class="mobile-nav-links">
+        <a href="/" data-translate="nav_home">Home</a>
+        <a href="about.html" data-translate="nav_about">About Us</a>
+        <a href="services.html" data-translate="nav_services">Services</a>
+        <a href="contact.html" class="btn btn-primary" data-translate="nav_cta">Contact Us</a>
+      </nav>
+    </div>
+
+    <!-- Main Scrollable Story Layout -->
+    \n<main class="scroll-container">\n
+  <section class="scroll-section hero-section">
+    <div class="container hero-container" style="align-items: center; text-align: center;">
+      <div class="hero-text-content" style="max-width: 800px; margin: 0 auto; padding-top: 15vh;">
+        <div class="badge fade-in">Origin & Vision</div>
+        <h1 class="main-headline fade-in" style="font-size: 4rem;">Intelligence,<br>Engineered.</h1>
+        <p class="subheadline fade-in" style="margin-top: 2rem;">
+          We are not a traditional agency. We are a digital engineering firm born to accelerate Saudi Vision 2030 by fusing cutting-edge artificial intelligence with high-performance conversion architecture.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="scroll-section" style="min-height: 100vh;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-top: 10vh;">
+      <div class="glass" style="padding: 3rem; border-radius: 20px;">
+        <h3 class="highlight-gold" style="font-size: 1.5rem; margin-bottom: 1rem;">The Human Limit</h3>
+        <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">
+          Traditional marketing operations are bottlenecked by human bandwidth. Delayed reporting, slow creative execution, and manual lead validation result in wasted capital and lost market share.
+        </p>
+      </div>
+      <div class="glass" style="padding: 3rem; border-radius: 20px; border-top: 2px solid #00E5FF;">
+        <h3 style="color: #00E5FF; font-size: 1.5rem; margin-bottom: 1rem;">The Adonix Paradigm</h3>
+        <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">
+          By orchestrating autonomous AI agents, machine-learning data pipelines, and real-time algorithmic optimizations, we remove operational friction. Our systems scale infinitely, working 24/7 to dominate your digital vertical.
+        </p>
+      </div>
+    </div>
+  </section>
+\n</main>\n
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
