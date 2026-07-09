@@ -508,26 +508,26 @@
           
           <div class="contact-wrapper">
             <!-- Glassmorphism Form -->
-            <form id="contact-form" class="contact-form glass" onsubmit="event.preventDefault();">
+            <form id="contact-form" class="contact-form glass" action="https://formsubmit.co/info@adonixdigital.com" method="POST">
               <div class="form-row">
                 <div class="form-group">
                   <label for="form-name" data-translate="f_name">Full Name / Company Name</label>
-                  <input type="text" id="form-name" placeholder="Adonix Corp" required />
+                  <input type="text" id="form-name" name="name" placeholder="Adonix Corp" required />
                 </div>
                 <div class="form-group">
                   <label for="form-email" data-translate="f_email">Work Email</label>
-                  <input type="email" id="form-email" placeholder="ceo@company.sa" required />
+                  <input type="email" id="form-email" name="email" placeholder="ceo@company.sa" required />
                 </div>
               </div>
               
               <div class="form-row">
                 <div class="form-group">
                   <label for="form-phone" data-translate="f_phone">Phone Number</label>
-                  <input type="tel" id="form-phone" placeholder="+966 50 000 0000" required />
+                  <input type="tel" id="form-phone" name="phone" placeholder="+966 50 000 0000" required />
                 </div>
                 <div class="form-group">
                   <label for="form-service" data-translate="f_service">Primary Growth Goal</label>
-                  <select id="form-service" required>
+                  <select id="form-service" name="service" required>
                     <option value="" disabled selected data-translate="opt_select">Select goal...</option>
                     <option value="seo" data-translate="opt_1">SEO & Paid Advertising Scaling</option>
                     <option value="ai" data-translate="opt_2">AI Conversational Agents Integration</option>
@@ -539,7 +539,7 @@
 
               <div class="form-group">
                 <label for="form-msg" data-translate="f_msg">Project Requirements (Optional)</label>
-                <textarea id="form-msg" rows="4" placeholder="Tell us about your targets..."></textarea>
+                <textarea id="form-msg" name="message" rows="4" placeholder="Tell us about your targets..."></textarea>
               </div>
 
               <button type="submit" id="submit-btn" class="btn btn-primary btn-block">

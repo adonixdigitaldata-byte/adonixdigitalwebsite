@@ -91,43 +91,43 @@
         </p>
         
         <div style="margin-top: 4rem;">
-          <h4 style="font-size: 1rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Direct Channels</h4>
+          <h4 style="font-size: 1rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;" data-translate="contact_channels">Direct Channels</h4>
           <p style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 500;">hello@adonix.digital</p>
           <p style="font-size: 1.2rem; font-weight: 500;">+966 50 123 4567</p>
-          <p style="font-size: 1rem; color: rgba(255,255,255,0.5); margin-top: 2rem;">Riyadh, Kingdom of Saudi Arabia</p>
+          <p style="font-size: 1rem; color: rgba(255,255,255,0.5); margin-top: 2rem;" data-translate="contact_loc">Riyadh, Kingdom of Saudi Arabia</p>
         </div>
       </div>
       
       <div class="contact-wrapper">
-        <form id="contact-form" class="contact-form glass" onsubmit="event.preventDefault();" style="backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1);">
+        <form id="contact-form" class="contact-form glass" action="https://formsubmit.co/info@adonixdigital.com" method="POST" style="backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1);">
           <div class="form-row">
             <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" placeholder="John Doe" required style="background: rgba(0,0,0,0.5);"/>
+              <label data-translate="contact_fname">Full Name</label>
+              <input type="text" name="name" placeholder="John Doe" required style="background: rgba(0,0,0,0.5);"/>
             </div>
             <div class="form-group">
-              <label>Corporate Email</label>
-              <input type="email" placeholder="ceo@company.sa" required style="background: rgba(0,0,0,0.5);"/>
+              <label data-translate="contact_email">Corporate Email</label>
+              <input type="email" name="email" placeholder="ceo@company.sa" required style="background: rgba(0,0,0,0.5);"/>
             </div>
           </div>
           
           <div class="form-group">
-            <label>Current Digital Friction</label>
-            <select required style="background: rgba(0,0,0,0.5);">
-              <option value="" disabled selected>Identify primary bottleneck...</option>
-              <option value="leads">Low Lead Volume / High CPA</option>
-              <option value="sales">Low Conversion Rates</option>
-              <option value="ops">Operational Bandwidth / Manual Tasks</option>
+            <label data-translate="contact_fric">Current Digital Friction</label>
+            <select name="friction" required style="background: rgba(0,0,0,0.5);">
+              <option value="" disabled selected data-translate="contact_fric_opt0">Identify primary bottleneck...</option>
+              <option value="leads" data-translate="contact_fric_opt1">Low Lead Volume / High CPA</option>
+              <option value="sales" data-translate="contact_fric_opt2">Low Conversion Rates</option>
+              <option value="ops" data-translate="contact_fric_opt3">Operational Bandwidth / Manual Tasks</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>System Requirements</label>
-            <textarea rows="4" placeholder="Describe the scale of your operations..." style="background: rgba(0,0,0,0.5);"></textarea>
+            <label data-translate="contact_sys">System Requirements</label>
+            <textarea name="requirements" rows="4" placeholder="Describe the scale of your operations..." style="background: rgba(0,0,0,0.5);"></textarea>
           </div>
 
           <button type="submit" id="submit-btn" class="btn btn-primary btn-block" style="margin-top: 1rem;">
-            <span>Transmit Consultation Request</span>
+            <span data-translate="contact_btn">Transmit Consultation Request</span>
             <span class="btn-arrow">→</span>
           </button>
         </form>

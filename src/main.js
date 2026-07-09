@@ -213,7 +213,31 @@ const translations = {
     s_24_desc: "Seamless integration of WhatsApp for business communication.",
     s_f1: "Scalable Infrastructure",
     s_f2: "High Conversion Rate",
-    s_f3: "24/7 Processing"
+    s_f3: "24/7 Processing",
+    about_badge: "Origin & Vision",
+    about_h1: "Intelligence,<br>Engineered.",
+    about_sub: "We are not a traditional agency. We are a digital engineering firm born to accelerate Saudi Vision 2030 by fusing cutting-edge artificial intelligence with high-performance conversion architecture.",
+    about_limit_h3: "The Human Limit",
+    about_limit_p: "Traditional marketing operations are bottlenecked by human bandwidth. Delayed reporting, slow creative execution, and manual lead validation result in wasted capital and lost market share.",
+    about_paradigm_h3: "The Adonix Paradigm",
+    about_paradigm_p: "By orchestrating autonomous AI agents, machine-learning data pipelines, and real-time algorithmic optimizations, we remove operational friction. Our systems scale infinitely, working 24/7 to dominate your digital vertical.",
+    serv_badge: "Digital Ecosystem",
+    serv_h1: "Constructing Dominance.",
+    serv_sub: "Our services are not isolated deliverables. They are deeply interconnected digital frameworks designed to capture, convert, and scale.",
+    prod_1_h2: "allgpt.com",
+    prod_2_h2: "Social Suite",
+    prod_3_h2: "Dating Advice",
+    contact_channels: "Direct Channels",
+    contact_loc: "Riyadh, Kingdom of Saudi Arabia",
+    contact_fname: "Full Name",
+    contact_email: "Corporate Email",
+    contact_fric: "Current Digital Friction",
+    contact_fric_opt0: "Identify primary bottleneck...",
+    contact_fric_opt1: "Low Lead Volume / High CPA",
+    contact_fric_opt2: "Low Conversion Rates",
+    contact_fric_opt3: "Operational Bandwidth / Manual Tasks",
+    contact_sys: "System Requirements",
+    contact_btn: "Transmit Consultation Request"
   },
   ar: {
     nav_home: "الرئيسية",
@@ -412,7 +436,31 @@ const translations = {
     s_24_desc: "تكامل سلس لتطبيق واتساب لتواصل الأعمال.",
     s_f1: "بنية تحتية قابلة للتوسع",
     s_f2: "معدل تحويل عالي",
-    s_f3: "معالجة على مدار الساعة"
+    s_f3: "معالجة على مدار الساعة",
+    about_badge: "المنشأ والرؤية",
+    about_h1: "ذكاء،<br>مُصمم هندسياً.",
+    about_sub: "نحن لسنا وكالة تقليدية. نحن شركة هندسة رقمية نشأت لتسريع رؤية السعودية 2030 من خلال دمج الذكاء الاصطناعي المتطور مع بنية التحويل عالية الأداء.",
+    about_limit_h3: "الحد البشري",
+    about_limit_p: "تتأخر عمليات التسويق التقليدية بسبب قيود النطاق البشري. يؤدي تأخير إعداد التقارير وبطء التنفيذ الإبداعي والتحقق اليدوي من العملاء المحتملين إلى إهدار رأس المال وفقدان الحصة السوقية.",
+    about_paradigm_h3: "نموذج أدونيكس",
+    about_paradigm_p: "من خلال تنسيق وكلاء الذكاء الاصطناعي المستقلين وخطوط بيانات التعلم الآلي والتحسينات الخوارزمية في الوقت الفعلي، نزيل الاحتكاك التشغيلي. تتوسع أنظمتنا بلا حدود، وتعمل على مدار الساعة طوال أيام الأسبوع للسيطرة على قطاعك الرقمي.",
+    serv_badge: "النظام البيئي الرقمي",
+    serv_h1: "بناء الهيمنة.",
+    serv_sub: "خدماتنا ليست مجرد مخرجات معزولة. إنها أطر رقمية مترابطة بعمق مصممة لالتقاط وتحويل وتوسيع نطاق أعمالك.",
+    prod_1_h2: "allgpt.com",
+    prod_2_h2: "Social Suite",
+    prod_3_h2: "Dating Advice",
+    contact_channels: "قنوات الاتصال المباشرة",
+    contact_loc: "الرياض، المملكة العربية السعودية",
+    contact_fname: "الاسم الكامل",
+    contact_email: "البريد الإلكتروني للشركة",
+    contact_fric: "العوائق الرقمية الحالية",
+    contact_fric_opt0: "حدد العائق الرئيسي...",
+    contact_fric_opt1: "انخفاض حجم العملاء / تكلفة الاستحواذ العالية",
+    contact_fric_opt2: "معدلات تحويل منخفضة",
+    contact_fric_opt3: "نطاق العمليات / المهام اليدوية",
+    contact_sys: "متطلبات النظام",
+    contact_btn: "إرسال طلب الاستشارة"
   }
 };
 
@@ -2011,7 +2059,8 @@ premiumCards.forEach((card) => {
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
     
-    // Smooth 3D Perspective Tilt
+    // Smooth 3D Perspective Tilt disabled to keep cards fixed
+    /*
     const tiltX = (rect.height / 2 - y) / 18;
     const tiltY = (x - rect.width / 2) / 18;
     
@@ -2022,9 +2071,11 @@ premiumCards.forEach((card) => {
       duration: 0.25,
       ease: "power2.out"
     });
+    */
   });
 
   card.addEventListener("mouseleave", () => {
+    /*
     gsap.to(card, {
       rotateX: 0,
       rotateY: 0,
@@ -2032,6 +2083,7 @@ premiumCards.forEach((card) => {
       duration: 0.5,
       ease: "power2.out"
     });
+    */
   });
 });
 
@@ -2282,33 +2334,7 @@ const contactForm = document.getElementById("contact-form");
 const formFeedback = document.getElementById("form-feedback");
 const submitBtn = document.getElementById("submit-btn");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    // Lock submit button
-    submitBtn.disabled = true;
-    formFeedback.className = "form-feedback-message";
-    formFeedback.innerText = currentLang === "en" ? "Transmitting information securely..." : "جاري إرسال البيانات بشكل آمن...";
-    
-    // Simulate API pipeline transmission
-    setTimeout(() => {
-      formFeedback.className = "form-feedback-message success";
-      formFeedback.innerText = currentLang === "en" 
-        ? "✓ Strategic consult request received. Our AI voice agent will call you in 1 minute." 
-        : "✓ تم استقبال طلب الاستشارة بنجاح. سيتصل بك المساعد الصوتي الذكي خلال دقيقة واحدة.";
-      
-      // Reset form
-      contactForm.reset();
-      submitBtn.disabled = false;
-      
-      // Remove success message after a while
-      setTimeout(() => {
-        formFeedback.innerText = "";
-      }, 5000);
-    }, 1500);
-  });
-}
+// Contact Form submission handled natively by HTML action
 
 // Update year in footer
 const yearEl = document.getElementById("year"); if (yearEl) yearEl.innerText = new Date().getFullYear();
