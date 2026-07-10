@@ -129,8 +129,19 @@ const translations = {
     step5_title: "Scale",
     step5_desc: "Aggressively scale advertising budgets and roll out company-wide workflow automations.",
     contact_tag: "Partner With Us",
-    contact_title: "Ready To Lead The Future?",
-    contact_sub: "Partner with Saudi Arabia's next-generation AI and digital growth agency. Secure your free audit call.",
+    contact_title: "Let's explore how Adonix can work for you.",
+    contact_sub: "Tell us about yourself in the form below. We will connect you with an Adonix expert who can answer any questions you have. You can also directly book a meeting here.",
+    contact_cta_book: "Book a call",
+    contact_phone: "+966 53 849 8580",
+    contact_whatsapp: "Chat on WhatsApp",
+    contact_email_val: "info@adonixdigital.com",
+    contact_email_sub: "Send us an email",
+    contact_directions: "Get directions",
+    contact_connect: "Connect with us",
+    contact_send_msg: "Send a Message",
+    contact_fname_ph: "John Doe",
+    contact_email_ph: "ceo@company.sa",
+    nav_contact_btn: "Contact Us",
     f_name: "Full Name / Company Name",
     f_email: "Work Email",
     f_phone: "Phone Number",
@@ -228,7 +239,7 @@ const translations = {
     prod_2_h2: "Social Suite",
     prod_3_h2: "Dating Advice",
     contact_channels: "Direct Channels",
-    contact_loc: "Riyadh, Kingdom of Saudi Arabia",
+    contact_loc: "Jeddah, Saudi Arabia",
     contact_fname: "Full Name",
     contact_email: "Corporate Email",
     contact_fric: "Current Digital Friction",
@@ -451,7 +462,18 @@ const translations = {
     prod_2_h2: "Social Suite",
     prod_3_h2: "Dating Advice",
     contact_channels: "قنوات الاتصال المباشرة",
-    contact_loc: "الرياض، المملكة العربية السعودية",
+    contact_loc: "جدة، المملكة العربية السعودية",
+    contact_cta_book: "احجز مكالمة",
+    contact_phone: "+966 53 849 8580",
+    contact_whatsapp: "تحدث عبر واتساب",
+    contact_email_val: "info@adonixdigital.com",
+    contact_email_sub: "أرسل لنا بريدًا إلكترونيًا",
+    contact_directions: "احصل على الاتجاهات",
+    contact_connect: "تواصل معنا",
+    contact_send_msg: "أرسل رسالة",
+    contact_fname_ph: "جون دو",
+    contact_email_ph: "ceo@company.sa",
+    nav_contact_btn: "اتصل بنا",
     contact_fname: "الاسم الكامل",
     contact_email: "البريد الإلكتروني للشركة",
     contact_fric: "العوائق الرقمية الحالية",
@@ -464,10 +486,11 @@ const translations = {
   }
 };
 
-let currentLang = "en";
+let currentLang = localStorage.getItem("adonix_lang") || "en";
 
 function setLanguage(lang) {
   currentLang = lang;
+  localStorage.setItem("adonix_lang", lang);
   const htmlEl = document.documentElement;
   htmlEl.setAttribute("lang", lang);
   htmlEl.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
@@ -520,16 +543,28 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
   const nextLang = currentLang === "en" ? "ar" : "en";
   gsap.to("body", {
     opacity: 0,
-    duration: 0.25,
+    duration: 0.15,
     onComplete: () => {
       setLanguage(nextLang);
       gsap.to("body", { 
         opacity: 1, 
-        duration: 0.25,
-        onComplete: () => ScrollTrigger.refresh()
+        duration: 0.15,
+        onComplete: () => {
+          // Minimal delay to ensure DOM is fully repainted before refreshing triggers
+          setTimeout(() => ScrollTrigger.refresh(), 50);
+        }
       });
     }
   });
+});
+
+// Initialize language on load
+document.addEventListener("DOMContentLoaded", () => {
+  if (currentLang === "ar") {
+    setLanguage("ar");
+  } else {
+    setLanguage("en");
+  }
 });
 
 /* ==========================================================================

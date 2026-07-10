@@ -261,6 +261,10 @@ body {
   transform-origin: left center;
 }
 
+[dir="rtl"] .nav-img {
+  transform-origin: right center;
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;

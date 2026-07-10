@@ -89,7 +89,7 @@
         <a href="about.html" data-translate="nav_about">About Us</a>
         <a href="services.html" data-translate="nav_services">Services</a>
         <a href="products.html" data-translate="nav_products">Our Products</a>
-        <a href="contact.html" class="btn btn-primary" data-translate="nav_cta">Contact Us</a>
+        <a href="contact.html" class="btn btn-primary" data-translate="nav_contact_btn">Contact Us</a>
       </nav>
     </div>
 
@@ -109,7 +109,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 900px;
+        width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
         gap: 3rem;
         position: relative;
@@ -148,55 +149,67 @@
     <div class="container premium-contact-layout">
       <!-- Header Column: Info & Text -->
       <div class="contact-header" style="text-align: center; width: 100%;">
-        <div class="badge fade-in" style="margin-bottom: 1.5rem; display: inline-block;" data-translate="contact_tag">Initiate Protocol</div>
-        <h2 data-translate="contact_title" class="fade-in" style="font-size: 4.5rem; line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Initialize Growth.</h2>
-        <p data-translate="contact_sub" class="fade-in" style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
-          Establish a secure connection with our engineering team to audit your current digital architecture and map out a custom AI integration plan.
+        <h2 data-translate="contact_title" class="fade-in" style="font-size: 4.5rem; line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; text-shadow: 0 4px 25px rgba(255,255,255,0.3);">Let's explore how Adonix can work for you.</h2>
+        <p data-translate="contact_sub" class="fade-in" style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 2rem auto;">
+          Tell us about yourself in the form below. We will connect you with an Adonix expert who can answer any questions you have. You can also directly book a meeting here.
         </p>
-      </div>
-      <!-- Contact Information Section -->
-      <div class="contact-info-blocks premium-glass-panel fade-in" style="width: 100%; max-width: 700px; padding: 3.5rem; display: flex; flex-direction: column; align-items: center; gap: 2.5rem; text-align: center; margin: 0 auto;">
+        <a href="https://calendly.com/adonixaimarketing/30min?month=2026-07" target="_blank" class="btn btn-primary fade-in" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 1.25rem 2.5rem; border-radius: 12px; font-size: 1.1rem; letter-spacing: 1px; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 2rem;">
+          <span data-translate="contact_cta_book">Book a call</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"></path><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+        </a>
+      
+            <!-- Contact Information Section -->
+      <div class="contact-info-blocks premium-glass-panel fade-in" style="width: 100%; max-width: 1200px; padding: 3rem 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin: 0 auto 3rem auto; align-items: start;">
         
-        <!-- Phone -->
-        <a href="tel:+966538498580" style="display: flex; flex-direction: column; align-items: center; gap: 12px; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #6ee7c9;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <!-- Phone (WhatsApp) -->
+        <a href="https://wa.me/966538498580" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 12px; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; color: #ffffff; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           </div>
-          <span style="font-size: 1.25rem; font-weight: 500;">+966 53 849 8580</span>
+          <span style="font-size: 1.05rem; font-weight: 600; white-space: nowrap;" data-translate="contact_phone">+966 53 849 8580</span>
+          <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6);" data-translate="contact_whatsapp">Chat on WhatsApp</span>
         </a>
 
         <!-- Email -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@adonixdigital.com" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 12px; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
-          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #6ee7c9;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@adonixdigital.com" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 12px; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; color: #ffffff; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </div>
-          <span style="font-size: 1.25rem; font-weight: 500;">info@adonixdigital.com</span>
+          <span style="font-size: 1.05rem; font-weight: 600; white-space: nowrap;" data-translate="contact_email_val">info@adonixdigital.com</span>
+          <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6);" data-translate="contact_email_sub">Send us an email</span>
         </a>
 
         <!-- Address -->
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #e879a8;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <a href="https://maps.app.goo.gl/viHsSDZ66TVYPHbN9?g_st=ac" target="_blank" style="display: flex; flex-direction: column; align-items: center; gap: 12px; color: white; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; color: #ffffff; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           </div>
-          <span style="font-size: 1.1rem; font-weight: 500; color: white;" data-translate="contact_loc">Riyadh, Saudi Arabia</span>
-        </div>
-
-        <!-- WhatsApp -->
-        <a href="https://wa.me/966538498580" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 36px; background: rgba(37, 211, 102, 0.1); border: 1px solid #25D366; color: #25D366; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.15rem; margin-top: 0.5rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.1);" onmouseover="this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.2)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 4px 15px rgba(37, 211, 102, 0.1)'; this.style.transform='translateY(0)'">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-          </svg>
-          Chat on WhatsApp
+          <span style="font-size: 1.05rem; font-weight: 600; white-space: nowrap;" data-translate="contact_loc">Jeddah, Saudi Arabia</span>
+          <span style="font-size: 0.9rem; color: rgba(255,255,255,0.6);" data-translate="contact_directions">Get directions</span>
         </a>
 
         <!-- Social Media -->
-        <div style="display: flex; justify-content: center; gap: 24px; margin-top: 1rem;">
-          <a href="https://linkedin.com/company/adonixdigital" target="_blank" style="color: white; opacity: 0.7; transition: 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://twitter.com/adonixdigital" target="_blank" style="color: white; opacity: 0.7; transition: 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-          </a>
+        <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; gap: 16px; color: white; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <span style="font-size: 1.1rem; font-weight: 500; color: rgba(255,255,255,0.7);" data-translate="contact_connect">Connect with us</span>
+          
+          <div style="display: flex; justify-content: center; gap: 32px; align-items: center;">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/adonixdigital" target="_blank" style="color: #ffffff; opacity: 0.8; transition: all 0.3s ease; padding: 10px;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/adonixdigital/?hl=en" target="_blank" style="color: #ffffff; opacity: 0.8; transition: all 0.3s ease; padding: 10px;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/adonix-ai/?viewAsMember=true" target="_blank" style="color: #ffffff; opacity: 0.8; transition: all 0.3s ease; padding: 10px;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <!-- X -->
+            <a href="https://x.com/AdonixDigital" target="_blank" style="color: #ffffff; opacity: 0.8; transition: all 0.3s ease; padding: 10px;" onmouseover="this.style.opacity='1'; this.style.transform='translateY(-3px)'" onmouseout="this.style.opacity='0.8'; this.style.transform='translateY(0)'">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
       
@@ -207,7 +220,7 @@
           <!-- Subtle Form Glow Effect inside the panel -->
           <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #6ee7c9; filter: blur(70px); opacity: 0.15; z-index: -1;"></div>
 
-          <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: #fff;">Send a Message</h3>
+          <h3 data-translate="contact_send_msg" style="font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: #fff;">Send a Message</h3>
 
           <!-- Web3Forms Configuration -->
           <input type="hidden" name="access_key" value="f06c8e4f-4415-4c9e-9299-b35c9bee425d">
@@ -218,11 +231,11 @@
           <div class="form-row" style="display: flex; flex-direction: column; gap: 1.5rem;">
             <div class="form-group">
               <label data-translate="contact_fname" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Full Name</label>
-              <input type="text" name="name" placeholder="John Doe" required class="contact-input-premium" style="width: 100%; box-sizing: border-box;"/>
+              <input type="text" name="name" data-translate="contact_fname_ph" placeholder="John Doe" required class="contact-input-premium" style="width: 100%; box-sizing: border-box;"/>
             </div>
             <div class="form-group">
               <label data-translate="contact_email" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Corporate Email</label>
-              <input type="email" name="email" placeholder="ceo@company.sa" required class="contact-input-premium" style="width: 100%; box-sizing: border-box;"/>
+              <input type="email" name="email" data-translate="contact_email_ph" placeholder="ceo@company.sa" required class="contact-input-premium" style="width: 100%; box-sizing: border-box;"/>
             </div>
           </div>
           
