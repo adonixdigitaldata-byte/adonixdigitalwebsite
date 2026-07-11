@@ -155,7 +155,17 @@ const translations = {
     submit_btn: "Book Your Free Growth Consultation",
     f_privacy: "Privacy Policy",
     f_terms: "Terms of Service",
+    nav_about: "About Us",
+    nav_services: "Services",
+    nav_blog: "Blog",
     nav_products: "Our Products",
+    blog_hero_title: "Insights & Intelligence",
+    blog_hero_sub: "AI, automation, and the systems reshaping how businesses operate — straight from the Adonix team.",
+    blog_load_more: "Load More Articles",
+    blog_news_title: "Stay Ahead of the Curve",
+    blog_news_sub: "Get AI and automation insights delivered straight to your inbox.",
+    blog_news_placeholder: "Enter your email",
+    blog_news_btn: "Subscribe",
     products_tag: "Our Portfolio",
     products_title: "Innovating the Future.",
     products_subtitle: "Explore our flagship products and successful projects that redefine the digital landscape.",
@@ -226,7 +236,7 @@ const translations = {
     s_f2: "High Conversion Rate",
     s_f3: "24/7 Processing",
     about_badge: "Origin & Vision",
-    about_h1: "Intelligence,<br>Engineered.",
+    about_h1: "Intelligence, Engineered.",
     about_sub: "We are not a traditional agency. We are a digital engineering firm born to accelerate Saudi Vision 2030 by fusing cutting-edge artificial intelligence with high-performance conversion architecture.",
     about_limit_h3: "The Human Limit",
     about_limit_p: "Traditional marketing operations are bottlenecked by human bandwidth. Delayed reporting, slow creative execution, and manual lead validation result in wasted capital and lost market share.",
@@ -243,12 +253,46 @@ const translations = {
     contact_fname: "Full Name",
     contact_email: "Corporate Email",
     contact_fric: "Current Digital Friction",
+    contact_fric_ph: "e.g. Lead conversion rate is dropping",
     contact_fric_opt0: "Identify primary bottleneck...",
     contact_fric_opt1: "Low Lead Volume / High CPA",
     contact_fric_opt2: "Low Conversion Rates",
     contact_fric_opt3: "Operational Bandwidth / Manual Tasks",
     contact_sys: "System Requirements",
-    contact_btn: "Transmit Consultation Request"
+    contact_btn: "Transmit Consultation Request",
+    title_home: "Adonix Digital | Next-Gen AI & Digital Marketing Agency",
+    title_about: "About Adonix Digital | Saudi Arabia's Leading AI Agency",
+    title_services: "AI & Marketing Services | Automation, SEO, Paid Ads",
+    title_products: "Adonix Digital Products | AllGPT & Digital AI Tools",
+    title_contact: "Contact Adonix Digital | Audit Your Digital Architecture",
+    title_blog: "Adonix Digital Blog | AI & Automation Insights",
+    title_post: "Adonix Digital Blog | Read Article",
+    about_origin_label: "Why Adonix Exists",
+    about_origin_title: "Our Origin",
+    about_origin_text: "Adonix was founded on a single observation: businesses weren't losing to smarter competitors — they were losing to slower systems. Manual reporting. Delayed campaigns. Human teams stretched thin trying to do what machines now do better. We built Adonix to close that gap — not with another marketing agency, but with an autonomous digital operations engine.",
+    about_method_label: "The Adonix Method",
+    about_method_1_title: "01 — Diagnose",
+    about_method_2_title: "02 — Deploy",
+    about_method_3_title: "03 — Dominate",
+    about_who_title: "Who We Are",
+    about_who_text: "Adonix is a collective of AI engineers, automation architects, and growth strategists united by one belief: the businesses that win the next decade won't be the ones with the most people — they'll be the ones with the smartest systems. We don't sell 'services.' We build infrastructure — the AI-driven backbone that lets ambitious businesses operate at a scale human teams alone never could.",
+    footer_copyright: "© 2026 Adonix Digital. All Rights Reserved. Riyadh, KSA.",
+    metric_1: "500M+ SAR",
+    metric_2: "4.5x",
+    metric_3: "2.5s",
+    about_method_desc_1: "We map your entire digital operation — marketing, leads, workflows — to find exactly where human bottlenecks are bleeding revenue.",
+    about_method_desc_2: "We architect and deploy AI agents, automation pipelines, and intelligent systems custom-built for your business — not templated software.",
+    about_method_desc_3: "Your systems run 24/7, self-optimizing in real time, while you focus on strategy instead of execution.",
+    cta_headline: "Ready to Remove the Human Limit?",
+    cta_subtext: "Book a strategy call and see how Adonix can rebuild your operations around autonomous AI.",
+    blog_author_name: "Adonix Team",
+    blog_author_bio: "We build AI-driven digital operations engines to help ambitious businesses scale.",
+    blog_related_heading: "Related Articles",
+    contact_fname_ph: "Adonix Corp",
+    contact_email_ph: "ceo@company.sa",
+    contact_req_ph: "Describe the scale of your operations...",
+    blog_news_placeholder: "Enter your email",
+    read_article: "Read Article \u2192"
   },
   ar: {
     nav_home: "الرئيسية",
@@ -256,12 +300,21 @@ const translations = {
     nav_contact: "اتصل بنا",
     loader_subtitle: "جاري تهيئة النظام الرقمي...",
     nav_services: "خدماتنا",
+    nav_blog: "المدونة",
+    nav_products: "منتجاتنا",
     nav_ai: "قلب الذكاء الاصطناعي",
     nav_results: "النتائج",
     nav_cases: "دراسات الحالة",
     nav_why: "لماذا نحن",
     nav_process: "خطوات العمل",
     nav_cta: "احجز استشارة مجانية",
+    blog_hero_title: "رؤى وذكاء",
+    blog_hero_sub: "الذكاء الاصطناعي والأتمتة والأنظمة التي تعيد تشكيل كيفية عمل الشركات — مباشرة من فريق أدونيكس.",
+    blog_load_more: "تحميل المزيد من المقالات",
+    blog_news_title: "ابق متقدماً بخطوة",
+    blog_news_sub: "احصل على رؤى الذكاء الاصطناعي والأتمتة مباشرة في بريدك الوارد.",
+    blog_news_placeholder: "أدخل بريدك الإلكتروني",
+    blog_news_btn: "اشترك",
     hero_badge: "شريك التحول الرقمي لرؤية 2030",
     hero_title: "ضاعف نمو أعمالك بالذكاء الاصطناعي والحلول الرقمية",
     hero_subheadline: "نساعد الشركات السعودية الكبرى والناشئة على التوسع السريع من خلال التسويق الرقمي المتقدم، وأتمتة العمليات، وأنظمة النمو الذكي.",
@@ -449,7 +502,7 @@ const translations = {
     s_f2: "معدل تحويل عالي",
     s_f3: "معالجة على مدار الساعة",
     about_badge: "المنشأ والرؤية",
-    about_h1: "ذكاء،<br>مُصمم هندسياً.",
+    about_h1: "ذكاء، مُصمم هندسياً.",
     about_sub: "نحن لسنا وكالة تقليدية. نحن شركة هندسة رقمية نشأت لتسريع رؤية السعودية 2030 من خلال دمج الذكاء الاصطناعي المتطور مع بنية التحويل عالية الأداء.",
     about_limit_h3: "الحد البشري",
     about_limit_p: "تتأخر عمليات التسويق التقليدية بسبب قيود النطاق البشري. يؤدي تأخير إعداد التقارير وبطء التنفيذ الإبداعي والتحقق اليدوي من العملاء المحتملين إلى إهدار رأس المال وفقدان الحصة السوقية.",
@@ -482,7 +535,41 @@ const translations = {
     contact_fric_opt2: "معدلات تحويل منخفضة",
     contact_fric_opt3: "نطاق العمليات / المهام اليدوية",
     contact_sys: "متطلبات النظام",
-    contact_btn: "إرسال طلب الاستشارة"
+    contact_btn: "إرسال طلب الاستشارة",
+    contact_fric_ph: "مثال: معدل تحويل العملاء في انخفاض",
+    title_home: "أدونيكس ديجيتال | وكالة الجيل القادم للذكاء الاصطناعي والتسويق الرقمي",
+    title_about: "عن أدونيكس ديجيتال | الوكالة الرائدة للذكاء الاصطناعي في السعودية",
+    title_services: "خدمات الذكاء الاصطناعي والتسويق | الأتمتة، السيو، الإعلانات المدفوعة",
+    title_products: "منتجات أدونيكس ديجيتال | منصات وأدوات الذكاء الاصطناعي",
+    title_contact: "تواصل مع أدونيكس ديجيتال | قيم بنيتك الرقمية",
+    title_blog: "مدونة أدونيكس ديجيتال | رؤى الذكاء الاصطناعي والأتمتة",
+    title_post: "مدونة أدونيكس ديجيتال | اقرأ المقال",
+    about_origin_label: "لماذا وجدت أدونيكس",
+    about_origin_title: "نشأتنا",
+    about_origin_text: "تأسست أدونيكس بناءً على ملاحظة واحدة: الشركات لم تكن تخسر أمام منافسين أذكى — بل كانت تخسر أمام أنظمة أبطأ. التقارير اليدوية، الحملات المتأخرة، وفرق العمل التي تحاول القيام بما تفعله الآلات الآن بشكل أفضل. قمنا ببناء أدونيكس لسد هذه الفجوة — ليس كوكالة تسويق أخرى، ولكن كمحرك عمليات رقمي مستقل.",
+    about_method_label: "منهجية أدونيكس",
+    about_method_1_title: "01 — التشخيص",
+    about_method_2_title: "02 — النشر",
+    about_method_3_title: "03 — السيطرة",
+    about_who_title: "من نحن",
+    about_who_text: "أدونيكس هي مجموعة من مهندسي الذكاء الاصطناعي ومهندسي الأتمتة واستراتيجيي النمو الذين يوحدهم إيمان واحد: الشركات التي ستفوز في العقد القادم لن تكون تلك التي تمتلك أكبر عدد من الموظفين — بل ستكون تلك التي تمتلك أذكى الأنظمة. نحن لا نبيع 'خدمات'. نحن نبني البنية التحتية — العمود الفقري المدعوم بالذكاء الاصطناعي والذي يسمح للشركات الطموحة بالعمل على نطاق لا يمكن للفرق البشرية وحدها تحقيقه.",
+    footer_copyright: "© 2026 أدونيكس ديجيتال. جميع الحقوق محفوظة. الرياض، المملكة العربية السعودية.",
+    metric_1: "500+ مليون ريال",
+    metric_2: "4.5 ضعف",
+    metric_3: "2.5 ثانية",
+    about_method_desc_1: "نقوم بتخطيط عمليتك الرقمية بالكامل — التسويق، العملاء المحتملين، سير العمل — لنجد بالضبط أين تستنزف الاختناقات البشرية الإيرادات.",
+    about_method_desc_2: "نقوم بتصميم ونشر وكلاء الذكاء الاصطناعي، وخطوط الأتمتة، والأنظمة الذكية المصممة خصيصًا لعملك — وليس البرامج الجاهزة.",
+    about_method_desc_3: "تعمل أنظمتك على مدار الساعة، وتحسن نفسها في الوقت الفعلي، بينما تركز أنت على الاستراتيجية بدلاً من التنفيذ.",
+    cta_headline: "هل أنت مستعد لتجاوز الحد البشري؟",
+    cta_subtext: "احجز مكالمة استراتيجية وشاهد كيف يمكن لأدونيكس إعادة بناء عملياتك حول الذكاء الاصطناعي المستقل.",
+    blog_author_name: "فريق أدونيكس",
+    blog_author_bio: "نحن نبني محركات عمليات رقمية تعتمد على الذكاء الاصطناعي لمساعدة الشركات الطموحة على التوسع.",
+    blog_related_heading: "مقالات ذات صلة",
+    contact_fname_ph: "شركة أدونيكس",
+    contact_email_ph: "ceo@company.sa",
+    contact_req_ph: "صف حجم عملياتك...",
+    blog_news_placeholder: "أدخل بريدك الإلكتروني",
+    read_article: "اقرأ المقال \u2190"
   }
 };
 
@@ -529,7 +616,7 @@ function setLanguage(lang) {
 
   // Re-translate placeholder options in select
   const goalSelect = document.getElementById("form-service");
-  if (goalSelect) {
+  if (goalSelect && goalSelect.tagName === "SELECT") {
     goalSelect.options[0].text = translations[lang].opt_select;
     goalSelect.options[1].text = translations[lang].opt_1;
     goalSelect.options[2].text = translations[lang].opt_2;
@@ -2030,8 +2117,8 @@ const cursor = document.getElementById("custom-cursor");
 const cursorRing = document.getElementById("custom-cursor-ring");
 
 window.addEventListener("mousemove", (e) => {
-  gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.05 });
-  gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.15 });
+  gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0 });
+  gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.1 });
   // Store normalized mouse coordinates for 3D Magnetic Parallax
   window.mouseNormX = (e.clientX / window.innerWidth) * 2 - 1;
   window.mouseNormY = -(e.clientY / window.innerHeight) * 2 + 1;

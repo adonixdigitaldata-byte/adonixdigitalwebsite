@@ -126,7 +126,7 @@ body {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9998;
-  transition: transform 0.1s ease-out, border 0.3s, width 0.3s, height 0.3s;
+  transition: border 0.3s, width 0.3s, height 0.3s;
 }
 
 .custom-cursor.hover {
@@ -263,6 +263,7 @@ body {
 
 [dir="rtl"] .nav-img {
   transform-origin: right center;
+  margin-right: 2.5rem;
 }
 
 .nav-links {
@@ -1180,8 +1181,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  height: 60px;
-  overflow: hidden;
+  height: auto;
 }
 
 .case-metrics-grid {

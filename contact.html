@@ -1,19 +1,28 @@
 <!doctype html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QG9NHE80VF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QG9NHE80VF');
+    </script>
+    <meta name="google" content="notranslate">
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/adonixfavblack.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Best Practices -->
-    <title>Contact Adonix Digital | Audit Your Digital Architecture Today</title>
-    <meta name="description" content="Get in touch with Adonix Digital, Saudi Arabia's premier AI & Digital Growth Agency. Establish a secure connection with our engineering team today." />
-    <meta name="keywords" content="Contact Adonix Digital, Hire AI Agency KSA, SEO Services Contact, Adonix Digital Riyadh, Marketing Consultation" />
+    <title data-translate="title_contact">Adonix Digital</title>
+    <meta name="description" data-translate="meta_desc_contact" content="Get in touch with Adonix Digital, Saudi Arabia's premier AI & Digital Growth Agency. Establish a secure connection with our engineering team today." />
+    <meta name="keywords" data-translate="meta_keys_contact" content="Contact Adonix Digital, Hire AI Agency KSA, SEO Services Contact, Adonix Digital Riyadh, Marketing Consultation" />
     <link rel="canonical" href="https://adonixdigital.com/contact" />
     
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="Contact Adonix Digital | Audit Your Digital Architecture Today" />
-    <meta property="og:description" content="Get in touch with Adonix Digital, Saudi Arabia's premier AI & Digital Growth Agency. Establish a secure connection with our engineering team today." />
+    <meta property="og:title" data-translate="og_title_contact" content="Contact Adonix Digital | Audit Your Digital Architecture Today" />
+    <meta property="og:description" data-translate="og_desc_contact" content="Get in touch with Adonix Digital, Saudi Arabia's premier AI & Digital Growth Agency. Establish a secure connection with our engineering team today." />
     <meta property="og:url" content="https://adonixdigital.com/contact" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://adonixdigital.com/adonixlogot.svg" />
@@ -63,6 +72,7 @@
           <a href="/" data-translate="nav_home">Home</a>
           <a href="about.html" data-translate="nav_about">About Us</a>
           <a href="services.html" data-translate="nav_services">Services</a>
+          <a href="blog.html" data-translate="nav_blog">Blog</a>
           <a href="products.html" data-translate="nav_products">Our Products</a>
           <a href="contact.html" data-translate="nav_contact">Contact Us</a>
         </nav>
@@ -88,6 +98,7 @@
         <a href="/" data-translate="nav_home">Home</a>
         <a href="about.html" data-translate="nav_about">About Us</a>
         <a href="services.html" data-translate="nav_services">Services</a>
+          <a href="blog.html" data-translate="nav_blog">Blog</a>
         <a href="products.html" data-translate="nav_products">Our Products</a>
         <a href="contact.html" class="btn btn-primary" data-translate="nav_contact_btn">Contact Us</a>
       </nav>
@@ -241,17 +252,12 @@
           
           <div class="form-group" style="margin-bottom: 1.5rem;">
             <label data-translate="contact_fric" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Current Digital Friction</label>
-            <select name="friction" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
-              <option value="" disabled selected data-translate="contact_fric_opt0">Identify primary bottleneck...</option>
-              <option value="leads" data-translate="contact_fric_opt1">Low Lead Volume / High CPA</option>
-              <option value="sales" data-translate="contact_fric_opt2">Low Conversion Rates</option>
-              <option value="ops" data-translate="contact_fric_opt3">Operational Bandwidth / Manual Tasks</option>
-            </select>
+            <input type="text" name="friction" data-translate="contact_fric_ph" placeholder="Describe your primary bottleneck..." required class="contact-input-premium" style="width: 100%; box-sizing: border-box;" />
           </div>
 
           <div class="form-group" style="margin-bottom: 2rem;">
             <label data-translate="contact_sys" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">System Requirements</label>
-            <textarea name="requirements" rows="4" placeholder="Describe the scale of your operations..." class="contact-input-premium" style="width: 100%; box-sizing: border-box; resize: vertical;"></textarea>
+            <textarea name="requirements" rows="4" data-translate="contact_req_ph" placeholder="Describe the scale of your operations..." class="contact-input-premium" style="width: 100%; box-sizing: border-box; resize: vertical;"></textarea>
           </div>
 
           <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; padding: 1.25rem; font-size: 1.1rem; letter-spacing: 1px; display: flex; justify-content: center; align-items: center; gap: 10px; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 20px rgba(110, 231, 201, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
