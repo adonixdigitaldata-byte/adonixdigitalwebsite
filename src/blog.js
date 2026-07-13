@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const catColor = getCategoryColor(featuredPost.category);
         featuredContainer.innerHTML = `
           <a href="blog-post.html?slug=${featuredPost.slug}" style="text-decoration: none;">
-            <div class="glass" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem; border-radius: 20px; transition: all 0.3s ease; border-top: 2px solid ${catColor};" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+            <div class="glass" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: clamp(1.5rem, 5vw, 2rem); border-radius: 20px; transition: all 0.3s ease; border-top: 2px solid ${catColor};" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
               <div style="background: url('${featuredPost.image}') center/cover no-repeat; border-radius: 15px; min-height: 300px; display: flex; align-items: center; justify-content: center; position: relative;">
                  <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.6)); border-radius: 15px;"></div>
               </div>
@@ -128,13 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filtersContainer) renderFilters();
   if (gridContainer || featuredContainer) renderPosts();
 
-  const langToggleBtn = document.getElementById("lang-toggle");
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener("click", () => {
-      setTimeout(() => {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === "attributes" && mutation.attributeName === "lang") {
         if (filtersContainer) renderFilters();
         if (gridContainer || featuredContainer) renderPosts();
-      }, 50);
+      }
     });
-  }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
 });

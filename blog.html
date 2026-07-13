@@ -139,7 +139,7 @@
   <!-- Blog Grid -->
   <section style="padding-top: 2vh; padding-bottom: 10vh; position: relative;">
     <div class="container">
-      <div id="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <div id="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
         <!-- Grid injected by JS -->
       </div>
       
@@ -152,7 +152,7 @@
   <!-- Newsletter -->
   <section style="padding-top: 5vh; padding-bottom: 10vh; position: relative;">
     <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <div class="glass" style="max-width: 600px; width: 100%; margin: 0 auto; padding: 4rem 2rem; border-radius: 20px;">
+      <div class="glass" style="max-width: 600px; width: 100%; margin: 0 auto; padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 2rem); border-radius: 20px;">
         <h2 class="main-headline" style="font-size: 2.5rem; margin-bottom: 1rem;" data-translate="blog_news_title">Stay Ahead of the Curve</h2>
         <p class="subheadline" style="margin-bottom: 2rem; font-size: 1rem;" data-translate="blog_news_sub">Get AI and automation insights delivered straight to your inbox.</p>
         <form style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault();">
