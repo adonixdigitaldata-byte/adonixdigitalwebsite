@@ -74,6 +74,88 @@ document.addEventListener('DOMContentLoaded', () => {
       listItems.forEach(li => {
         li.style.marginBottom = '0.5rem';
       });
+
+      // Table styling to fix text congestion
+      const tables = postContent.querySelectorAll('table');
+      tables.forEach(t => {
+        t.style.width = '100%';
+        t.style.borderCollapse = 'collapse';
+        t.style.marginBottom = '2.5rem';
+        t.style.marginTop = '1.5rem';
+      });
+      const tableCells = postContent.querySelectorAll('th, td');
+      tableCells.forEach(tc => {
+        tc.style.padding = '1rem';
+        tc.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+        tc.style.textAlign = 'start';
+        tc.style.lineHeight = '1.5';
+      });
+      const tableHeaders = postContent.querySelectorAll('th');
+      tableHeaders.forEach(th => {
+        th.style.backgroundColor = 'rgba(255,255,255,0.05)';
+        th.style.fontWeight = 'bold';
+        th.style.color = '#22d3ee';
+      });
+
+      // Extract and render FAQ section as an accordion in a new card
+      const headings3 = Array.from(postContent.querySelectorAll('h3'));
+      const faqHeading = headings3.find(h => h.textContent.includes('Frequently Asked Questions') || h.textContent.includes('الأسئلة الشائعة'));
+      
+      let faqSection = document.getElementById('faq-section');
+      if (faqHeading) {
+        const faqItems = [];
+        let curr = faqHeading.nextElementSibling;
+        while (curr && curr.tagName === 'P' && curr.querySelector('strong')) {
+          faqItems.push(curr);
+          curr = curr.nextElementSibling;
+        }
+        
+        if (faqItems.length > 0) {
+          let accordionHtml = `<h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.8rem; text-align: start;">${faqHeading.innerHTML}</h3>`;
+          
+          faqItems.forEach(item => {
+            const strongTag = item.querySelector('strong');
+            let question = strongTag.innerHTML;
+            let answer = item.innerHTML.replace(strongTag.outerHTML, '').replace(/^<br\s*\/?>/, '').trim();
+            
+            accordionHtml += `
+               <div class="faq-item" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1rem 0;">
+                 <div class="faq-question" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: #22d3ee; font-size: 1.1rem; transition: color 0.3s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#22d3ee'" onclick="const ans = this.nextElementSibling; const icon = this.querySelector('.faq-icon'); if(ans.style.display === 'none'){ ans.style.display = 'block'; icon.textContent = '-'; } else { ans.style.display = 'none'; icon.textContent = '+'; }">
+                   <span>${question}</span>
+                   <span class="faq-icon" style="font-size: 1.5rem; font-weight: normal;">+</span>
+                 </div>
+                 <div class="faq-answer" style="display: none; padding-top: 1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">${answer}</div>
+               </div>
+            `;
+          });
+          
+          if (!faqSection) {
+            faqSection = document.createElement('section');
+            faqSection.id = 'faq-section';
+            faqSection.style.paddingTop = '2vh';
+            faqSection.style.paddingBottom = '5vh';
+            faqSection.style.position = 'relative';
+            
+            const containerSec = postContent.closest('section');
+            containerSec.insertAdjacentElement('afterend', faqSection);
+          }
+          
+          faqSection.innerHTML = `
+            <div class="container">
+              <div class="glass no-tilt" style="max-width: 750px; margin: 0 auto; padding: clamp(1.5rem, 5vw, 3rem); border-radius: 20px; text-align: start; line-height: 1.8; color: rgba(255,255,255,0.8); overflow-wrap: anywhere;">
+                ${accordionHtml}
+              </div>
+            </div>
+          `;
+          
+          faqHeading.remove();
+          faqItems.forEach(item => item.remove());
+        } else if (faqSection) {
+          faqSection.remove();
+        }
+      } else if (faqSection) {
+        faqSection.remove();
+      }
     }
 
     if (relatedGrid) {

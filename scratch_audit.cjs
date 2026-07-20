@@ -1,42 +1,32 @@
 const fs = require('fs');
 const path = require('path');
-const { JSDOM } = require('jsdom');
 
-const files = ['index.html', 'about.html', 'services.html', 'products.html', 'contact.html', 'blog.html', 'blog-post.html'];
+const dir = 'c:\\Users\\rishab\\adonixdigital';
+const files = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 
 files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  if (!fs.existsSync(filePath)) return;
-  
-  const content = fs.readFileSync(filePath, 'utf8');
-  const dom = new JSDOM(content);
-  const document = dom.window.document;
-  
-  // Find all text nodes
-  const textNodes = [];
-  const walk = document.createTreeWalker(document.body, dom.window.NodeFilter.SHOW_TEXT, null, false);
-  let n;
-  while(n = walk.nextNode()) {
-    if (n.textContent.trim().length > 0 && /[a-zA-Z]/.test(n.textContent)) {
-      // Check if any ancestor has data-translate
-      let parent = n.parentElement;
-      let hasTranslate = false;
-      while (parent && parent !== document.body) {
-        if (parent.hasAttribute('data-translate') || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
-          hasTranslate = true;
-          break;
-        }
-        parent = parent.parentElement;
-      }
-      if (!hasTranslate) {
-        textNodes.push(n.textContent.trim());
-      }
-    }
-  }
-  
-  if (textNodes.length > 0) {
-    console.log(`\n--- ${file} ---`);
-    const unique = [...new Set(textNodes)];
-    unique.forEach(t => console.log(`Untranslated: "${t}"`));
-  }
+  const filePath = path.join(dir, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/>احجز استشارة مجانية<\/a>/g, '>تدقيق مجاني للأعمال</a>');
+  content = content.replace(/>احجز مكالمة استشارية مجانية<\/a>/g, '>تدقيق مجاني للأعمال</a>');
+  content = content.replace(/>Book Strategy Call<\/a>/g, '>Free Business Audit</a>');
+  content = content.replace(/>Book A Free Strategy Call<\/a>/g, '>Free Business Audit</a>');
+  fs.writeFileSync(filePath, content);
 });
+
+// Update main.js
+const mainPath = path.join(dir, 'src', 'main.js');
+let mainContent = fs.readFileSync(mainPath, 'utf8');
+
+mainContent = mainContent.replace(/nav_cta:\s*"Book Strategy Call"/g, 'nav_cta: "Free Business Audit"');
+mainContent = mainContent.replace(/nav_cta:\s*"احجز استشارة مجانية"/g, 'nav_cta: "تدقيق مجاني للأعمال"');
+
+mainContent = mainContent.replace(/hero_cta_primary:\s*"Book A Free Strategy Call"/g, 'hero_cta_primary: "Free Business Audit"');
+mainContent = mainContent.replace(/hero_cta_primary:\s*"احجز مكالمة استشارية مجانية"/g, 'hero_cta_primary: "تدقيق مجاني للأعمال"');
+
+mainContent = mainContent.replace(/cta_subtext:\s*"Book a strategy call and see how Adonix can rebuild your operations around autonomous AI."/g, 'cta_subtext: "Get a free business audit and see how Adonix can rebuild your operations around autonomous AI."');
+mainContent = mainContent.replace(/cta_subtext:\s*"احجز مكالمة استراتيجية وشاهد كيف يمكن لأدونيكس إعادة بناء عملياتك حول الذكاء الاصطناعي المستقل."/g, 'cta_subtext: "احصل على تدقيق مجاني للأعمال وشاهد كيف يمكن لأدونيكس إعادة بناء عملياتك حول الذكاء الاصطناعي المستقل."');
+
+fs.writeFileSync(mainPath, mainContent);
+
+console.log("Replaced successfully!");

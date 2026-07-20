@@ -28,11 +28,11 @@ const translations = {
     nav_cases: "Case Studies",
     nav_why: "Why Us",
     nav_process: "Process",
-    nav_cta: "Book Strategy Call",
+    nav_cta: "Free Business Audit",
     hero_badge: "Vision 2030 Digital Partner",
     hero_title: "Transform Your Business With AI & Digital Growth",
     hero_subheadline: "Helping Saudi businesses scale through Digital Marketing, AI Automation, SEO, Paid Advertising, and Growth Systems.",
-    hero_cta_primary: "Book A Free Strategy Call",
+    hero_cta_primary: "Free Business Audit",
     hero_cta_secondary: "View Success Stories",
     holo_leads_title: "Leads Generated",
     holo_this_month: "this month",
@@ -285,7 +285,7 @@ const translations = {
     about_method_desc_2: "We architect and deploy AI agents, automation pipelines, and intelligent systems custom-built for your business — not templated software.",
     about_method_desc_3: "Your systems run 24/7, self-optimizing in real time, while you focus on strategy instead of execution.",
     cta_headline: "Ready to Remove the Human Limit?",
-    cta_subtext: "Book a strategy call and see how Adonix can rebuild your operations around autonomous AI.",
+    cta_subtext: "Get a free business audit and see how Adonix can rebuild your operations around autonomous AI.",
     blog_author_name: "Adonix Team",
     blog_author_bio: "We build AI-driven digital operations engines to help ambitious businesses scale.",
     blog_related_heading: "Related Articles",
@@ -311,7 +311,7 @@ const translations = {
     nav_cases: "دراسات الحالة",
     nav_why: "لماذا نحن",
     nav_process: "خطوات العمل",
-    nav_cta: "احجز استشارة مجانية",
+    nav_cta: "تدقيق مجاني للأعمال",
     blog_hero_title: "رؤى وذكاء",
     blog_hero_sub: "الذكاء الاصطناعي والأتمتة والأنظمة التي تعيد تشكيل كيفية عمل الشركات — مباشرة من فريق أدونيكس.",
     blog_load_more: "تحميل المزيد من المقالات",
@@ -322,7 +322,7 @@ const translations = {
     hero_badge: "شريك التحول الرقمي لرؤية 2030",
     hero_title: "ضاعف نمو أعمالك بالذكاء الاصطناعي والحلول الرقمية",
     hero_subheadline: "نساعد الشركات السعودية الكبرى والناشئة على التوسع السريع من خلال التسويق الرقمي المتقدم، وأتمتة العمليات، وأنظمة النمو الذكي.",
-    hero_cta_primary: "احجز مكالمة استشارية مجانية",
+    hero_cta_primary: "تدقيق مجاني للأعمال",
     hero_cta_secondary: "شاهد قصص النجاح",
     holo_leads_title: "العملاء المحتملين الجدد",
     holo_this_month: "هذا الشهر",
@@ -568,7 +568,7 @@ const translations = {
     about_method_desc_2: "نقوم بتصميم ونشر وكلاء الذكاء الاصطناعي، وخطوط الأتمتة، والأنظمة الذكية المصممة خصيصًا لعملك — وليس البرامج الجاهزة.",
     about_method_desc_3: "تعمل أنظمتك على مدار الساعة، وتحسن نفسها في الوقت الفعلي، بينما تركز أنت على الاستراتيجية بدلاً من التنفيذ.",
     cta_headline: "هل أنت مستعد لتجاوز الحد البشري؟",
-    cta_subtext: "احجز مكالمة استراتيجية وشاهد كيف يمكن لأدونيكس إعادة بناء عملياتك حول الذكاء الاصطناعي المستقل.",
+    cta_subtext: "احصل على تدقيق مجاني للأعمال وشاهد كيف يمكن لأدونيكس إعادة بناء عملياتك حول الذكاء الاصطناعي المستقل.",
     blog_author_name: "فريق أدونيكس",
     blog_author_bio: "نحن نبني محركات عمليات رقمية تعتمد على الذكاء الاصطناعي لمساعدة الشركات الطموحة على التوسع.",
     blog_related_heading: "مقالات ذات صلة",
@@ -2666,7 +2666,7 @@ document.querySelectorAll('a').forEach(anchor => {
    ========================================================================== */
 
 // 1. 3D Glass Card Tilt Effect
-document.querySelectorAll('.glass:not(#contact-form)').forEach(card => {
+document.querySelectorAll('.glass:not(#contact-form):not(.no-tilt)').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
