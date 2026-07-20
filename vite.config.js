@@ -18,7 +18,9 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         products: resolve(__dirname, 'products.html'),
         blog: resolve(__dirname, 'blog.html'),
-        blogpost: resolve(__dirname, 'blog-post.html')
+        blogpost: resolve(__dirname, 'blog-post.html'),
+        audit: resolve(__dirname, 'audit.html'),
+        thankyouaudit: resolve(__dirname, 'thank-you-audit.html')
       }
     }
   }
