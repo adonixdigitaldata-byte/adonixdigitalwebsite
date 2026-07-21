@@ -78,6 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // Table styling to fix text congestion
       const tables = postContent.querySelectorAll('table');
       tables.forEach(t => {
+        const wrapper = document.createElement('div');
+        wrapper.style.overflowX = 'auto';
+        wrapper.style.width = '100%';
+        t.parentNode.insertBefore(wrapper, t);
+        wrapper.appendChild(t);
+      });
+      tables.forEach(t => {
         t.style.width = '100%';
         t.style.borderCollapse = 'collapse';
         t.style.marginBottom = '2.5rem';

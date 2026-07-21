@@ -1,0 +1,195 @@
+const fs = require('fs');
+
+const contactHtml = fs.readFileSync('c:\\Users\\rishab\\adonixdigital\\contact.html', 'utf8');
+
+// Extract parts
+const headStart = contactHtml.substring(0, contactHtml.indexOf('</head>'));
+const headerStart = contactHtml.indexOf('<body');
+const headerEnd = contactHtml.indexOf('<!-- Main Scrollable Story Layout -->');
+const footerStart = contactHtml.indexOf('<!-- Global Footer -->'); // Wait, contact.html doesn't have a footer? I should check index.html for footer.
+
+const indexHtml = fs.readFileSync('c:\\Users\\rishab\\adonixdigital\\index.html', 'utf8');
+const footerActualStart = indexHtml.indexOf('<footer');
+const bodyEnd = indexHtml.substring(footerActualStart);
+
+// Let's manually construct audit.html
+const metaPixel = `
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2028981294675620');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2028981294675620&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta name="robots" content="noindex, nofollow">
+`;
+
+let auditHead = headStart.replace('<title data-translate="title_contact">تواصل مع أدونيكس ديجيتال | قيم بنيتك الرقمية</title>', '<title>Free AI Business Audit | Adonix Digital</title>') + metaPixel + '</head>';
+
+let headerMarkup = contactHtml.substring(headerStart, headerEnd).replace('data-scene-preset="CONTACT"', 'data-scene-preset="SERVICES"');
+
+let auditMain = `
+    <!-- Main Scrollable Story Layout -->
+    <main class="scroll-container">
+      <section class="scroll-section" style="min-height: 100vh; padding-top: 15vh; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center;">
+        <!-- Ambient Animated Orbs -->
+        <div style="position: absolute; top: 10%; right: 5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(110, 231, 201, 0.15) 0%, transparent 60%); filter: blur(80px); border-radius: 50%; z-index: 0; animation: float 12s ease-in-out infinite;"></div>
+        <div style="position: absolute; bottom: -10%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232, 121, 168, 0.15) 0%, transparent 60%); filter: blur(80px); border-radius: 50%; z-index: 0; animation: float 15s ease-in-out infinite reverse;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto 4rem auto;">
+          <h1 data-translate="audit_hero_title" class="fade-in" style="font-size: clamp(3rem, 5vw, 5rem); line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; text-shadow: 0 4px 25px rgba(255,255,255,0.3);">Get a FREE AI Business Growth Audit</h1>
+          <p data-translate="audit_hero_sub" class="fade-in" style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 2rem auto;">Discover what's preventing your business from generating more leads.</p>
+          <a href="#audit-form-section" class="btn btn-primary fade-in" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 1.25rem 2.5rem; border-radius: 12px; font-size: 1.1rem; letter-spacing: 1px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <span data-translate="audit_hero_btn">Book My Free Audit</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </a>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto 4rem auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="glass fade-in" style="padding: 2rem; border-radius: 20px; text-align: center;">
+                    <div style="color: #6ee7c9; margin-bottom: 1rem;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+                    <h3 data-translate="audit_feat_1" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">AI Website Analysis</h3>
+                    <p data-translate="audit_feat_1_desc" style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Identify performance bottlenecks and conversion killers.</p>
+                </div>
+                <div class="glass fade-in" style="padding: 2rem; border-radius: 20px; text-align: center;">
+                    <div style="color: #e879a8; margin-bottom: 1rem;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+                    <h3 data-translate="audit_feat_2" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">Google SEO Audit</h3>
+                    <p data-translate="audit_feat_2_desc" style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Uncover ranking opportunities to dominate local search.</p>
+                </div>
+                <div class="glass fade-in" style="padding: 2rem; border-radius: 20px; text-align: center;">
+                    <div style="color: #7b61ff; margin-bottom: 1rem;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h3 data-translate="audit_feat_3" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">Competitor Analysis</h3>
+                    <p data-translate="audit_feat_3_desc" style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">See exactly what marketing strategies your top competitors use.</p>
+                </div>
+                <div class="glass fade-in" style="padding: 2rem; border-radius: 20px; text-align: center;">
+                    <div style="color: #6ee7c9; margin-bottom: 1rem;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                    <h3 data-translate="audit_feat_4" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">AI Automation Opportunities</h3>
+                    <p data-translate="audit_feat_4_desc" style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Discover where AI can save hundreds of hours of manual work.</p>
+                </div>
+                <div class="glass fade-in" style="padding: 2rem; border-radius: 20px; text-align: center;">
+                    <div style="color: #e879a8; margin-bottom: 1rem;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                    <h3 data-translate="audit_feat_5" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">Lead Generation Strategy</h3>
+                    <p data-translate="audit_feat_5_desc" style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">A custom roadmap to double your qualified inbound leads.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="audit-form-section" class="contact-wrapper fade-in" style="width: 100%; max-width: 700px; text-align: left; margin: 0 auto; position: relative; z-index: 2;">
+            <form id="audit-form" class="premium-glass-panel" style="position: relative; overflow: hidden; width: 100%; background: rgba(15, 15, 15, 0.4); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 3rem; box-shadow: 0 30px 60px rgba(0,0,0,0.4);">
+              <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: #6ee7c9; filter: blur(70px); opacity: 0.15; z-index: -1;"></div>
+              
+              <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
+                  <div class="form-group">
+                      <label data-translate="audit_form_name" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Name</label>
+                      <input type="text" id="audit_name" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_company" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Company Name</label>
+                      <input type="text" id="audit_company" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_phone" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Phone Number</label>
+                      <div style="display: flex; gap: 0.5rem;">
+                          <input type="text" id="audit_phone_code" value="+966" required class="contact-input-premium" style="width: 80px; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 0.5rem; color: white; text-align: center;" />
+                          <input type="tel" id="audit_phone" required class="contact-input-premium" style="flex: 1; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                      </div>
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_email" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Email</label>
+                      <input type="email" id="audit_email" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Valid email required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_city" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">City</label>
+                      <input type="text" id="audit_city" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_website" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Website (optional)</label>
+                      <input type="url" id="audit_website" class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white;" />
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_ind" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Industry</label>
+                      <select id="audit_industry" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white; appearance: none;">
+                          <option value="" disabled selected>Select Industry</option>
+                          <option value="Retail & E-commerce" data-translate="audit_form_ind_ret">Retail & E-commerce</option>
+                          <option value="Real Estate" data-translate="audit_form_ind_re">Real Estate</option>
+                          <option value="Healthcare" data-translate="audit_form_ind_health">Healthcare</option>
+                          <option value="Food & Beverage" data-translate="audit_form_ind_fb">Food & Beverage</option>
+                          <option value="Professional Services" data-translate="audit_form_ind_prof">Professional Services (Legal, Consulting, Finance)</option>
+                          <option value="Other" data-translate="audit_form_ind_other">Other</option>
+                      </select>
+                      <input type="text" id="audit_industry_other" data-translate="audit_form_ind_other_ph" placeholder="Specify your industry" class="contact-input-premium" style="display: none; width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white; margin-top: 0.5rem;" />
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+                  <div class="form-group">
+                      <label data-translate="audit_form_budget" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 500;">Monthly Marketing Budget</label>
+                      <select id="audit_budget" required class="contact-input-premium" style="width: 100%; box-sizing: border-box; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; color: white; appearance: none;">
+                          <option value="" disabled selected>Select Budget</option>
+                          <option value="Under SAR 2,000" data-translate="audit_form_bud_1">Under SAR 2,000</option>
+                          <option value="SAR 2,000–5,000" data-translate="audit_form_bud_2">SAR 2,000–5,000</option>
+                          <option value="SAR 5,000–10,000" data-translate="audit_form_bud_3">SAR 5,000–10,000</option>
+                          <option value="Above SAR 10,000" data-translate="audit_form_bud_4">Above SAR 10,000</option>
+                      </select>
+                      <div class="error-msg" style="color: #e879a8; font-size: 0.8rem; margin-top: 0.3rem; display: none;">Required</div>
+                  </div>
+              </div>
+              <button type="submit" id="audit-submit-btn" class="btn btn-primary" style="width: 100%; padding: 1.25rem; font-size: 1.1rem; letter-spacing: 1px; display: flex; justify-content: center; align-items: center; gap: 10px; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                  <span data-translate="audit_form_btn">Claim My FREE AI Business Audit</span>
+              </button>
+              <div id="form-error-global" style="color: #e879a8; font-size: 0.9rem; margin-top: 1rem; display: none; text-align: center;">Please fix the errors above.</div>
+            </form>
+        </div>
+
+      </section>
+    </main>
+`;
+
+const auditScripts = `
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/auditForm.js"></script>
+  </body>
+</html>
+`;
+
+fs.writeFileSync('c:\\Users\\rishab\\adonixdigital\\audit.html', auditHead + headerMarkup + auditMain + bodyEnd.replace('</body>\n</html>', '') + auditScripts);
+
+
+// Thank you page
+let thankYouMain = `
+    <!-- Main Scrollable Story Layout -->
+    <main class="scroll-container">
+      <section class="scroll-section" style="min-height: 100vh; padding-top: 15vh; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="position: absolute; top: 10%; right: 5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(110, 231, 201, 0.15) 0%, transparent 60%); filter: blur(80px); border-radius: 50%; z-index: 0; animation: float 12s ease-in-out infinite;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto;">
+            <div class="glass" style="padding: 4rem 2rem; border-radius: 24px;">
+                <h1 data-translate="thank_you_title" class="fade-in" style="font-size: clamp(3rem, 5vw, 5rem); line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; color: #ffffff; text-shadow: 0 4px 25px rgba(255,255,255,0.3);">Thank you!</h1>
+                <p data-translate="thank_you_body" class="fade-in" style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 3rem auto;">Your AI Business Audit request has been received. Our team will contact you within 24 hours.</p>
+                <a href="https://wa.me/966538498580" target="_blank" class="btn btn-primary fade-in" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 1.25rem 2.5rem; border-radius: 12px; font-size: 1.1rem; letter-spacing: 1px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <span data-translate="thank_you_wa">Chat on WhatsApp</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
+            </div>
+        </div>
+      </section>
+    </main>
+`;
+
+fs.writeFileSync('c:\\Users\\rishab\\adonixdigital\\thank-you-audit.html', auditHead + headerMarkup + thankYouMain + bodyEnd);
+
+console.log('HTML files created.');
