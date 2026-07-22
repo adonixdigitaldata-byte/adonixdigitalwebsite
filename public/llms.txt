@@ -31,7 +31,7 @@ Adonix Digital provides Enterprise-grade AI Automation, Website Design & Develop
 - **Address:** Office #602, 6th Floor, Matbouli Plaza, 7041 Fayd Al Samaa Street, Jeddah 21454, Saudi Arabia.
 
 ## Sitemap
-- [XML Sitemap Index](https://adonixdigital.com/sitemap_index.xml)
+- [XML Sitemap Index](https://adonixdigital.com/sitemap.xml)
 - [robots.txt](https://adonixdigital.com/robots.txt)
 
 > For full detailed information, see [llms-full.txt](https://adonixdigital.com/llms-full.txt).

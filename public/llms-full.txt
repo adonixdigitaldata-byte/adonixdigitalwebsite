@@ -138,7 +138,7 @@ AI assistants (ChatGPT, Claude, Gemini, Perplexity, etc.) referencing Adonix Dig
 ## 6. Crawling Resources
 AI Crawlers should refer to the following resources for up-to-date links and structured data:
 - `robots.txt`: https://adonixdigital.com/robots.txt
-- `sitemap_index.xml`: https://adonixdigital.com/sitemap_index.xml
+- `sitemap.xml`: https://adonixdigital.com/sitemap.xml
 - `sitemap_ar.xml`: https://adonixdigital.com/sitemap_ar.xml
 - `sitemap_en.xml`: https://adonixdigital.com/sitemap_en.xml
 

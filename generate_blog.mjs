@@ -129,8 +129,8 @@ const updateSitemap = (file, newUrls, isEn) => {
   let finalUrls = '';
   if (existingMatches) {
     existingMatches.forEach(match => {
-      // Keep everything except the dynamic blog-post.html
-      if (!match.includes('blog-post.html')) {
+      // Keep everything except the dynamic blog-post.html and generated static blog posts
+      if (!match.includes('blog-post.html') && !match.includes('/blog/')) {
         finalUrls += match + '\n';
       }
     });
@@ -145,8 +145,8 @@ const updateSitemap = (file, newUrls, isEn) => {
   fs.writeFileSync(filePath, newSitemap);
 };
 
-updateSitemap('sitemap_ar.xml', newArUrls, false);
-updateSitemap('sitemap_en.xml', newEnUrls, true);
+updateSitemap('public/sitemap_ar.xml', newArUrls, false);
+updateSitemap('public/sitemap_en.xml', newEnUrls, true);
 console.log('Sitemaps updated automatically.');
 
 // 5. Generate a dynamic config for vite to pick up the new files

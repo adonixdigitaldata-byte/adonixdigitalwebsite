@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://adonixdigital.com/sitemap_index.xml
