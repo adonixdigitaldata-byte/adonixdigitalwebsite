@@ -1,5 +1,10 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/supplier.html", "destination": "/", "permanent": true },
+    { "source": "/supplier", "destination": "/", "permanent": true },
+    { "source": "/supplier/", "destination": "/", "permanent": true }
+  ]
 }
