@@ -199,6 +199,7 @@ const translations = {
     nav_services: "Services",
     nav_blog: "Blog",
     nav_products: "Our Products",
+    nav_portfolio: "Portfolio",
     blog_hero_title: "Insights & Intelligence",
     blog_hero_sub: "AI, automation, and the systems reshaping how businesses operate — straight from the Adonix team.",
     blog_load_more: "Load More Articles",
@@ -384,6 +385,7 @@ const translations = {
     nav_services: "خدماتنا",
     nav_blog: "المدونة",
     nav_products: "منتجاتنا",
+    nav_portfolio: "أعمالنا",
     nav_ai: "قلب الذكاء الاصطناعي",
     nav_results: "النتائج",
     nav_cases: "دراسات الحالة",
@@ -682,6 +684,9 @@ function setLanguage(lang) {
   const translateElements = document.querySelectorAll("[data-translate]");
   translateElements.forEach((el) => {
     const key = el.getAttribute("data-translate");
+    if (key === "nav_portfolio" && el.tagName === "A") {
+      el.href = lang === "ar" ? "https://portfolio.adonixdigital.com/ar" : "https://portfolio.adonixdigital.com/en";
+    }
     if (translations[lang][key]) {
       if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
         el.placeholder = translations[lang][key];

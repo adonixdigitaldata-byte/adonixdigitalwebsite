@@ -251,6 +251,12 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 0;
+  margin-right: 6.5rem;
+}
+
+[dir="rtl"] .nav-brand {
+  margin-right: 0;
+  margin-left: 6.5rem;
 }
 
 .nav-img {
@@ -263,7 +269,7 @@ body {
 
 [dir="rtl"] .nav-img {
   transform-origin: right center;
-  margin-right: 2.5rem;
+  margin-right: 0;
 }
 
 .nav-links {
