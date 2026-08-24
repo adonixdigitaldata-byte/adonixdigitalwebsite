@@ -135,8 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         fbq('track', 'Lead');
                     }
                     
-                    // Redirect to Thank You page
-                    window.location.href = '/thank-you-audit.html';
+                    // Redirect to Thank You page via gtagSendEvent
+                    if (typeof window.gtagSendEvent === 'function') {
+                        window.gtagSendEvent('/thank-you-audit.html');
+                    } else if (typeof gtag === 'function') {
+                        gtag('event', 'close_convert_lead', {
+                            'event_callback': function() { window.location.href = '/thank-you-audit.html'; },
+                            'event_timeout': 2000
+                        });
+                    } else {
+                        window.location.href = '/thank-you-audit.html';
+                    }
                 } else {
                     console.error(result);
                     globalError.innerText = result.message || 'Submission failed. Please try again.';
